@@ -137,11 +137,27 @@ img {
   color: var(--title-text-color);
 
   position: relative;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .paragrahp-style:hover {
   color: var(--accent-color);
+}
+
+.current {
+  color: var(--accent-color);
+}
+
+.current::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+
+  position: absolute;
+  bottom: -1px;
+  left: 0;
 }
 
 .button-current {
@@ -153,10 +169,6 @@ img {
   color: var(--title-text-color);
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button-style {
-  color: var(--accent-color);
 }
 
 .button-current:hover {
@@ -211,7 +223,7 @@ img {
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .info {
@@ -340,7 +352,7 @@ img {
   margin-left: 10px;
 }
 
-.current {
+.portfolio-item {
   flex-basis: calc((100% - 2 * 30px) / 3);
 }
 
@@ -349,9 +361,9 @@ img {
   border: none;
   border-radius: 4px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .paragraf-name {
@@ -658,7 +670,7 @@ img {
 
   fill: #afb1b8;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
